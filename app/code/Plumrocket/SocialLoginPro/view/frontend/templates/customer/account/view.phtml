@@ -1,0 +1,66 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLogin
+ * @copyright   Copyright (c) 2014 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+
+?>
+
+<?php $accounts = $block->getCustomerAccounts(); ?>
+<p><?php echo $block->getLinkingDescription(); ?></p>
+
+<div class="pslogin-block">
+	<div class="linked-account pslogin-buttons">
+		<?php if (count($accounts)): ?>
+			<h2><?php echo __('Connected accounts'); ?></h2>
+			<?php foreach ($accounts as $account): ?>
+				<?php $photo = $this->helper('Plumrocket\SocialLoginPro\Helper\Data')->getPhotoPath(true, $account->getCustomerId(), $account->getType()); ?>
+				<?php if (!$photo) { ?>
+					<?php $photo = $this->getViewFileUrl('Plumrocket_SocialLoginPro::images/man-icon.png'); ?>
+				<?php } ?>
+				<?php $unlinkUrl = $this->getUrl('pslogin/account/unlinkAction', ['id' => $account->getId()]); ?>
+				<div class="custinfo social <?php echo $account->getType(); ?>">
+					<span class="unlink-link" onclick="window.location = '<?php echo $unlinkUrl; ?>'">&#10005;</span>
+					<a href="<?php echo $account->getAccountUrl(); ?>" target="_blank">
+						<div class="pslogin-button-auto">
+							<span class="user-photo" style="background-image:url('<?php echo $photo ?> '); ?>"></span>
+							<span class="pslogin-button-text"><?php echo $account->getType(); ?></span>
+						</div>
+					</a>
+				</div>
+			<?php endforeach; ?>
+		<?php endif; ?>
+
+	</div>
+
+	<?php $linkButtonsHtml = $block->getChildHtml('pslogin.link.buttons'); ?>
+	<?php if (strlen(trim($linkButtonsHtml)) > 0): ?>
+		<div class="unlinked-account">
+			<h2><?php echo __('Connect new account'); ?></h2>
+			<?php echo $linkButtonsHtml; ?>
+		</div>
+	<?php endif; ?>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+   var showFullButtonsAfterViewMore = true;
+//]]>
+</script>
+
+<script type='text/javascript'>
+    require(['jquery', 'mage/mage'], function($){
+        $('#pslogin-linkpopup').mage('pslogin', "{}");
+    });
+</script>

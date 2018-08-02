@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <head>
+        <title>Social Accounts</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Plumrocket\SocialLoginPro\Block\Customer\Account\View" cacheable="false" name="customers_social_accounts" template="Plumrocket_SocialLoginPro::customer/account/view.phtml">
+            	<block class="Plumrocket\SocialLoginPro\Block\Link\Buttons" name="pslogin.link.buttons" template="Plumrocket_SocialLoginPro::link/buttons.phtml" />
+            </block>
+        </referenceContainer>
+    </body>
+</page>

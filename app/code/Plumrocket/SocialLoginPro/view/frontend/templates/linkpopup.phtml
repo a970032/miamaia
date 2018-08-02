@@ -1,0 +1,31 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLogin
+ * @copyright   Copyright (c) 2017 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+<?php if ($this->showPopup()) { ?>
+	<div class="pslogin-addedoverlay"></div>
+
+	<div class="pslogin-pop-up-form pslogin-block">
+		<div id="pslogin-pop-up-bg" class="pslogin-cf fadeInDownBig">
+			<div class="pslogin-share">
+				<h2><?php echo __('Connect new account'); ?></h2>
+				<a href="javascript: void(0);" class="prpop-close-btn">&#10005;</a>
+				<p><?php echo nl2br($this->getDescription()); ?></p>
+                <?php echo $this->getChildHtml('pslogin.link.buttons'); ?>
+			</div>
+		</div>
+	</div>
+<?php } ?>

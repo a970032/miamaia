@@ -1,0 +1,17 @@
+<?php $accounts = $this->getAccounts(); ?>
+<?php if (count($accounts)): ?>
+	<?php foreach ($accounts as $account): ?>
+		 <?php $socialUrl = $account->getAccountUrl(); ?>
+                <div class="pslogin-block">
+                    <div class="ps-btn <?php echo $account->getType(); ?>">
+                   		<?php if ($socialUrl !== null): ?>
+                        	<a title="<?php echo ucfirst($account->getType()); ?>" target="_blank" href="<?php echo $socialUrl; ?>">
+                        		<span class="soc-li-icon"></span>
+                        	</a>
+                    	<?php else: ?>
+                        	<span class="soc-li-icon"></span>
+                        <?php endif; ?>
+                    </div>
+               	</div>
+	<?php endforeach; ?>
+<?php endif ?>

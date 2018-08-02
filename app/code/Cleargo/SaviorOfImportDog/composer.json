@@ -1,0 +1,26 @@
+{
+    "config": {
+        "vendor-dir": "./"
+    },
+    "name": "cleargo/m2_product_importer",
+    "description": "Product import csv converter for Magento 2",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Leo Leung",
+            "email": "leo@cleargo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "mnsami/composer-custom-directory-installer": "1.1.*",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "magento-force": "override",
+        "installer-paths": {
+            "app/code": ["cleargo/m2_product_importer"]
+        }
+    }
+}
+

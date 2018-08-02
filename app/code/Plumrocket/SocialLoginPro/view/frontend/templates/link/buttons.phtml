@@ -1,0 +1,42 @@
+<?php
+    $linkButtons = $this->getLinkButtons();
+    $maxButtonCount = 8;
+?>
+
+<?php if(count($linkButtons)) : ?>
+
+<div class="pslogin-buttons <?php if ($this->showFull()): ?>pslogin-buttons-showfull<?php endif; ?>" data-mage-init='{"pslogin":{}}'>
+    <ul class="pslogin-clearfix">
+    <?php $i = 0; ?>
+    <?php foreach ($linkButtons as $button) : ?>
+        <li class="pslogin-button <?php echo $button['type']; ?> pslogin-visible <?php if ($i >= $maxButtonCount): ?>pslogin-hidden<?php endif; ?>" <?php if ($i >= $maxButtonCount): ?>style="display:none;"<?php endif; ?> title="<?php echo $this->escapeHtml($button['link_text']); ?>">
+        	<?php $href = $this->getUrl('pslogin/account/doUse', ['type' => $button['type'], 'call' => 'pslogin.account.linkAction']); ?>
+            <a class="pslogin-button-link pslogin-button-click" rel="nofollow" href="javascript:void(0);" data-href="<?php echo $href; ?>" data-width="<?php echo $button['popup_width']; ?>" data-height="<?php echo $button['popup_height']; ?>">
+                <span class="pslogin-button-auto <?php echo !empty($button['image']['login'])? 'pslogin-has-button-image' : ''; ?> <?php echo !empty($button['image']['icon'])? 'pslogin-has-button-icon-image' : ''; ?>">
+                    <span class="pslogin-button-icon">
+                        <?php echo !empty($button['image']['icon'])? '<img class="pslogin-button-icon-image" src="'. $this->escapeHtml($button['image']['icon']) .'" />' : ''; ?>
+                    </span>
+                    <span class="pslogin-button-text"><?php echo $this->escapeHtml($button['link_text']); ?></span>
+                </span>
+            </a>
+        </li>
+        <?php $i++; ?>
+    <?php endforeach; ?>
+    </ul>
+
+    <?php if($i > $maxButtonCount): ?>
+        <div class="pslogin-spacer pslogin-clearfix pslogin-showmore">
+            <table>
+            	<tr>
+            		<td><div class="pslogin-border"></div></td>
+            		<td class="w100"><div class="pslogin-showmore-button pslogin-bordertext"><?php echo __('show more'); ?></div></td>
+            		<td><div class="pslogin-border"></div></td>
+            	</tr>
+            </table>
+        </div>
+    <?php endif; ?>
+	<div style="clear: both;"></div>
+
+</div>
+
+<?php endif; ?>

@@ -1,0 +1,41 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginPro
+ * @copyright   Copyright (c) 2017 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title><?php echo $block->getTitle(); ?></title>
+		<link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('Plumrocket_SocialLoginPro::pslogin.css'); ?>" media="all">
+	</head>
+	<body class="pslogin-openid <?php echo $block->getProvider(); ?>">
+		<form method="post" action=".">
+			<div class="network-logo"></div>
+			<div class="form-wrapper">
+				<?php echo $block->getTitle(); ?><br/>
+			    <input type="text" name="openid_id" value="" size="45" />
+			    <br />
+			    <div class="ajax-loader">
+			    	<div class="error-text"><?php echo $block->getErrorText(); ?></div>
+			    	<div class="image-gif"></div>
+			    </div>
+			    <input type="submit" name="submit" onclick="document.getElementsByClassName('error-text')[0].style.display = 'none'; document.getElementsByClassName('image-gif')[0].style.display = 'block';" value="Login" />
+		    </div>
+		</form>
+
+	</body>
+</html>

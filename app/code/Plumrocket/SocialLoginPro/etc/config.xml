@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginPro
+ * @copyright   Copyright (c) 2017 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <psloginpro>
+            <general>
+                <serial></serial>
+                <enable_for_login>1</enable_for_login>
+                <enable_for_register>1</enable_for_register>
+                <validate_ignore>1</validate_ignore>
+                <enable_subscription>1</enable_subscription>
+                <enable_photo>1</enable_photo>
+                <redirect_for_login>__referer__</redirect_for_login>
+                <redirect_for_register>__referer__</redirect_for_register>
+            </general>
+            <link>
+                <enable>1</enable>
+                <description>If you have multiple social networks accounts (like Facebook, Twitter, Google) - you can link your social accounts with your account at our store. This will allow you to access the website more conveniently!</description>
+                <enable_popup>1</enable_popup>
+                <timeout>30</timeout>
+            </link>
+            <share>
+                <enable>0</enable><!-- disabled by default -->
+                <title>Please share us with your friends!</title>
+                <description>Spread the word about this great Magento Store! Let everyone know about our great offers and everyday deals!</description>
+                <page>2</page>
+            </share>
+            <facebook>
+                <enable_birthday>1</enable_birthday>
+                <login_btn_text>Login with Facebook</login_btn_text>
+                <register_btn_text>Register with Facebook</register_btn_text>
+                <link_text>Link Facebook account</link_text>
+            </facebook>
+            <twitter>
+                <login_btn_text>Login with Twitter</login_btn_text>
+                <register_btn_text>Register with Twitter</register_btn_text>
+                <link_text>Link Twitter account</link_text>
+            </twitter>
+            <googleplus>
+                <login_btn_text>Login with Google+</login_btn_text>
+                <register_btn_text>Register with Google+</register_btn_text>
+                <link_text>Link Google+ account</link_text>
+            </googleplus>
+            <linkedin>
+                <login_btn_text>Login with LinkedIn</login_btn_text>
+                <register_btn_text>Register with LinkedIn</register_btn_text>
+                <link_text>Link LinkedIn account</link_text>
+            </linkedin>
+            <yahoo>
+                <login_btn_text>Login with Yahoo!</login_btn_text>
+                <register_btn_text>Register with Yahoo!</register_btn_text>
+                <link_text>Link Yahoo! account</link_text>
+            </yahoo>
+            <live>
+                <login_btn_text>Login with MS Live</login_btn_text>
+                <register_btn_text>Register with MS Live</register_btn_text>
+                <link_text>Link MS Live account</link_text>
+            </live>
+            <amazon>
+                <login_btn_text>Login with Amazon</login_btn_text>
+                <register_btn_text>Register with Amazon</register_btn_text>
+                <link_text>Link Amazon account</link_text>
+            </amazon>
+            <aol>
+                <login_btn_text>Login with AOL.</login_btn_text>
+                <register_btn_text>Register with AOL.</register_btn_text>
+                <link_text>Link AOL. account</link_text>
+            </aol>
+            <github>
+                <login_btn_text>Login with GitHub</login_btn_text>
+                <register_btn_text>Register with GitHub</register_btn_text>
+                <link_text>Link GitHub account</link_text>
+            </github>
+            <instagram>
+                <login_btn_text>Login with Instagram</login_btn_text>
+                <register_btn_text>Register with Instagram</register_btn_text>
+                <link_text>Link Instagram account</link_text>
+            </instagram>
+            <foursquare>
+                <login_btn_text>Login with Foursquare</login_btn_text>
+                <register_btn_text>Register with Foursquare</register_btn_text>
+                <link_text>Link Foursquare account</link_text>
+            </foursquare>
+            <dropbox>
+                <login_btn_text>Login with Dropbox</login_btn_text>
+                <register_btn_text>Register with Dropbox</register_btn_text>
+                <link_text>Link Dropbox account</link_text>
+            </dropbox>
+            <disqus>
+                <login_btn_text>Login with Disqus</login_btn_text>
+                <register_btn_text>Register with Disqus</register_btn_text>
+                <link_text>Link Disqus account</link_text>
+            </disqus>
+            <livejournal>
+                <login_btn_text>Login with LiveJournal</login_btn_text>
+                <register_btn_text>Register with LiveJournal</register_btn_text>
+                <link_text>Link LiveJournal account</link_text>
+            </livejournal>
+            <tumblr>
+                <login_btn_text>Login with Tumblr</login_btn_text>
+                <register_btn_text>Register with Tumblr</register_btn_text>
+                <link_text>Link Tumblr account</link_text>
+            </tumblr>
+            <flickr>
+                <login_btn_text>Login with Flickr</login_btn_text>
+                <register_btn_text>Register with Flickr</register_btn_text>
+                <link_text>Link Flickr account</link_text>
+            </flickr>
+            <wordpress>
+                <login_btn_text>Login with WordPress</login_btn_text>
+                <register_btn_text>Register with WordPress</register_btn_text>
+                <link_text>Link WordPress account</link_text>
+            </wordpress>
+            <vkontakte>
+                <login_btn_text>Login with Vkontakte</login_btn_text>
+                <register_btn_text>Register with Vkontakte</register_btn_text>
+                <link_text>Link Vkontakte account</link_text>
+            </vkontakte>
+            <odnoklassniki>
+                <login_btn_text>Login with Odnoklassniki</login_btn_text>
+                <register_btn_text>Register with Odnoklassniki</register_btn_text>
+                <link_text>Link Odnoklassniki account</link_text>
+            </odnoklassniki>
+            <mailru>
+                <login_btn_text>Login with Mail.ru</login_btn_text>
+                <register_btn_text>Register with Mail.ru</register_btn_text>
+                <link_text>Link Mail.ru account</link_text>
+            </mailru>
+            <yandex>
+                <login_btn_text>Login with Yandex</login_btn_text>
+                <register_btn_text>Register with Yandex</register_btn_text>
+                <link_text>Link Yandex account</link_text>
+            </yandex>
+            <paypal>
+                <login_btn_text>Login with PayPal</login_btn_text>
+                <register_btn_text>Register with PayPal</register_btn_text>
+                <link_text>Link PayPal account</link_text>
+            </paypal>
+            <salesforce>
+                <login_btn_text>Login with Salesforce</login_btn_text>
+                <register_btn_text>Register with Salesforce</register_btn_text>
+                <link_text>Link Salesforce account</link_text>
+            </salesforce>
+            <stackoverflow>
+                <login_btn_text>Login with Stackoverflow</login_btn_text>
+                <register_btn_text>Register with Stackoverflow</register_btn_text>
+                <link_text>Link Stackoverflow account</link_text>
+            </stackoverflow>
+            <evernote>
+                <login_btn_text>Login with Evernote</login_btn_text>
+                <register_btn_text>Register with Evernote</register_btn_text>
+                <link_text>Link Evernote account</link_text>
+            </evernote>
+            <mixi>
+                <login_btn_text>Login with Mixi</login_btn_text>
+                <register_btn_text>Register with Mixi</register_btn_text>
+                <link_text>Link Mixi account</link_text>
+            </mixi>
+            <mydigipass>
+                <login_btn_text>Login with Mydigipass</login_btn_text>
+                <register_btn_text>Register with Mydigipass</register_btn_text>
+                <link_text>Link Mydigipass account</link_text>
+            </mydigipass>
+            <qq>
+                <login_btn_text>Login with QQ</login_btn_text>
+                <register_btn_text>Register with QQ</register_btn_text>
+                <link_text>Link QQ account</link_text>
+            </qq>
+            <sinaweibo>
+                <login_btn_text>Login with Sina Weibo</login_btn_text>
+                <register_btn_text>Register with Sina Weibo</register_btn_text>
+                <link_text>Link Sina Weibo account</link_text>
+            </sinaweibo>
+            <soundcloud>
+                <login_btn_text>Login with SoundCloud</login_btn_text>
+                <register_btn_text>Register with SoundCloud</register_btn_text>
+                <link_text>Link SoundCloud account</link_text>
+            </soundcloud>
+            <verisign>
+                <login_btn_text>Login with Verisign</login_btn_text>
+                <register_btn_text>Register with Verisign</register_btn_text>
+                <link_text>Link Verisign account</link_text>
+            </verisign>
+            <xing>
+                <login_btn_text>Login with XING</login_btn_text>
+                <register_btn_text>Register with XING</register_btn_text>
+                <link_text>Link XING account</link_text>
+            </xing>
+            <kaixin001>
+                <login_btn_text>Login with Kaixin</login_btn_text>
+                <register_btn_text>Register with Kaixin</register_btn_text>
+                <link_text>Link Kaixin account</link_text>
+            </kaixin001>
+            <persona>
+                <login_btn_text>Login with Persona</login_btn_text>
+                <register_btn_text>Register with Persona</register_btn_text>
+                <link_text>Link Persona account</link_text>
+            </persona>
+            <bitbucket>
+                <login_btn_text>Login with Bitbucket</login_btn_text>
+                <register_btn_text>Register with Bitbucket</register_btn_text>
+                <link_text>Link Bitbucket account</link_text>
+            </bitbucket>
+            <skyrock>
+                <login_btn_text>Login with Skyrock</login_btn_text>
+                <register_btn_text>Register with Skyrock</register_btn_text>
+                <link_text>Link Skyrock account</link_text>
+            </skyrock>
+            <renren>
+                <login_btn_text>Login with Renren</login_btn_text>
+                <register_btn_text>Register with Renren</register_btn_text>
+                <link_text>Link Renren account</link_text>
+            </renren>
+            <bitly>
+                <login_btn_text>Login with Bitly</login_btn_text>
+                <register_btn_text>Register with Bitly</register_btn_text>
+                <link_text>Link Bitly account</link_text>
+            </bitly>
+            <boxcom>
+                <login_btn_text>Login with Box</login_btn_text>
+                <register_btn_text>Register with Box</register_btn_text>
+                <link_text>Link Box account</link_text>
+            </boxcom>
+            <vimeo>
+                <login_btn_text>Login with Vimeo</login_btn_text>
+                <register_btn_text>Register with Vimeo</register_btn_text>
+                <link_text>Link Vimeo account</link_text>
+            </vimeo>
+            <reddit>
+                <login_btn_text>Login with Reddit</login_btn_text>
+                <register_btn_text>Register with Reddit</register_btn_text>
+                <link_text>Link Reddit account</link_text>
+            </reddit>
+            <odesk>
+                <login_btn_text>Login with Upwork</login_btn_text>
+                <register_btn_text>Register with Upwork</register_btn_text>
+                <link_text>Link Upwork account</link_text>
+            </odesk>
+            <teamviewer>
+                <login_btn_text>Login with TeamViewer</login_btn_text>
+                <register_btn_text>Register with TeamViewer</register_btn_text>
+                <link_text>Link TeamViewer account</link_text>
+            </teamviewer>
+            <etsy>
+                <login_btn_text>Login with Etsy</login_btn_text>
+                <register_btn_text>Register with Etsy</register_btn_text>
+                <link_text>Link Etsy account</link_text>
+            </etsy>
+            <imgur>
+                <login_btn_text>Login with Imgur</login_btn_text>
+                <register_btn_text>Register with Imgur</register_btn_text>
+                <link_text>Link Imgur account</link_text>
+            </imgur>
+            <intuit>
+                <login_btn_text>Login with Intuit</login_btn_text>
+                <register_btn_text>Register with Intuit</register_btn_text>
+                <link_text>Link Intuit account</link_text>
+            </intuit>
+            <mailchimp>
+                <login_btn_text>Login with MailChimp</login_btn_text>
+                <register_btn_text>Register with MailChimp</register_btn_text>
+                <link_text>Link MailChimp account</link_text>
+            </mailchimp>
+            <dribbble>
+                <login_btn_text>Login with Dribbble</login_btn_text>
+                <register_btn_text>Register with Dribbble</register_btn_text>
+                <link_text>Link Dribbble account</link_text>
+            </dribbble>
+            <goodreads>
+                <login_btn_text>Login with Goodreads</login_btn_text>
+                <register_btn_text>Register with Goodreads</register_btn_text>
+                <link_text>Link Goodreads account</link_text>
+            </goodreads>
+            <lastfm>
+                <login_btn_text>Login with Last.fm</login_btn_text>
+                <register_btn_text>Register with Last.fm</register_btn_text>
+                <link_text>Link Last.fm account</link_text>
+            </lastfm>
+            <alipay>
+                <login_btn_text>Login with Alipay</login_btn_text>
+                <register_btn_text>Register with Alipay</register_btn_text>
+                <link_text>Link Alipay account</link_text>
+            </alipay>
+            <wechat>
+                <login_btn_text>Login with WeChat</login_btn_text>
+                <register_btn_text>Register with WeChat</register_btn_text>
+                <link_text>Link WeChat account</link_text>
+            </wechat>
+            <naver>
+                <login_btn_text>Login with NAVER</login_btn_text>
+                <register_btn_text>Register with NAVER</register_btn_text>
+            </naver>
+        </psloginpro>
+    </default>
+</config>

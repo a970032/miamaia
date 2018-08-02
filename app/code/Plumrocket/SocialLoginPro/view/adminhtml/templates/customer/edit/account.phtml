@@ -1,0 +1,25 @@
+<?php if ($sAccounts = $block->getSocialAccounts()): ?>
+<div class="admin__scope-old pslogin-block">
+	<div class="entry-edit form-inline">
+		<div class="fieldset-wrapper">
+			<div class="fieldset-wrapper-title">
+		        <span class="title"><?php echo __('Social Accounts'); ?></span>
+		    </div>
+		    <div>
+		    	<?php foreach($sAccounts as $sAccount): ?>
+					<div class="custinfo social <?php echo $sAccount->getType(); ?>">
+						<div class="soc-li-icon">
+							<a href="<?php echo $sAccount->getAccountUrl(); ?>" target="_blank">
+								<span class="user-photo" style="background-image:url('<?php
+									echo $sAccount->getPhoto() ? $sAccount->getPhoto() : $this->getSkinUrl('images/plumrocket/pslogin/man-icon.png')
+								?> '); ?>"></span>
+								<?php echo $sAccount->getType(); ?>
+							</a>
+						</div>
+					</div>
+				<?php endforeach; ?>
+		    </div>
+		</div>
+	</div>
+</div>
+<?php endif; ?>

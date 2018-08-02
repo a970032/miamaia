@@ -1,0 +1,40 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$formKey = $objectManager->get('Magento\Framework\Data\Form\FormKey');
+$websiteId=$block->getAllWebsiteId();
+?>
+<form method="post" action="<?php echo $block->getUrl('cleargocsv/index/indexpost')?>" enctype="multipart/form-data">
+    CSV File:
+    <input type="file" name="file" /><a href="<?php echo $block->getUrl('cleargocsv/index/sample')?>">Sample</a></a><br />
+    map_enabled:<select name="map_enabled"><option value="">No</option><option>Yes</option></select><br />
+    out_of_stock_qty:<input type="text" name="out_of_stock_qty" value="0" /><br />
+    use_config_min_qty:<select name="use_config_min_qty"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    is_qty_decimal:<select name="is_qty_decimal"><option value="0">No</option><option value="1">Yes</option></select><br />
+    allow_backorders:<select name="allow_backorders"><option value="0">No</option><option value="1">Yes</option></select><br />
+    use_config_backorders:<select name="use_config_backorders"><option value="0">No</option><option value="1">Yes</option></select><br />
+    min_cart_qty:<input type="text" name="min_cart_qty" value="1" /><br />
+    use_config_min_sale_qty:<select name="use_config_min_sale_qty"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    max_cart_qty:<input type="text" name="max_cart_qty" value="10000" /><br />
+    use_config_max_sale_qty:<select name="use_config_max_sale_qty"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    is_in_stock:<select name="is_in_stock"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    notify_on_stock_below:<select name="notify_on_stock_below"><option value="0" selected="selected">No</option><option value="1">Yes</option></select><br />
+    use_config_notify_stock_qty:<select name="use_config_notify_stock_qty"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    manage_stock:<select name="manage_stock"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    use_config_manage_stock:<select name="use_config_manage_stock"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    use_config_qty_increments:<select name="use_config_qty_increments"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    qty_increments:<select name="qty_increments"><option value="0">No</option><option value="1">Yes</option></select><br />
+    use_config_enable_qty_inc:<select name="use_config_enable_qty_inc"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    enable_qty_increments:<select name="enable_qty_increments"><option value="0" selected="selected">No</option><option value="1">Yes</option></select><br />
+    is_decimal_divided:<select name="is_decimal_divided"><option value="0" selected="selected">No</option><option value="1">Yes</option></select><br />
+    website_id:
+    <select name="website_id">
+        <?php foreach($websiteId as $key=>$value):?>
+        <option value="<?php echo $value['code']; ?>"><?php echo $value['name']; ?></option>
+        <?php endforeach;?>
+    </select><br />
+    deferred_stock_update:<select name="deferred_stock_update"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+    use_config_deferred_stock_update:<select name="use_config_deferred_stock_update"><option value="0">No</option><option value="1" selected="selected">Yes</option></select><br />
+
+    <input type="submit" value="Submit" />
+    <input name="form_key" type="hidden" value="<?php echo $formKey->getFormKey();?>" />
+</form>

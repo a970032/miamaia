@@ -1,0 +1,11 @@
+//install custom installer https://packagist.org/packages/mnsami/composer-custom-directory-installer
+composer require mnsami/composer-custom-directory-installer
+
+//put this piece of json into magento root compose.json
+"extra": {
+    "installer-paths": {
+      "./app/code/Cleargo/SaviorOfImportDog": ["cleargo/m2_product_importer"]
+    }
+  }
+//install module
+composer require cleargo/m2_product_importer --prefer-stable dev-master

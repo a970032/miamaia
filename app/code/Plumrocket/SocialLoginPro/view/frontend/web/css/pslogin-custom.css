@@ -1,0 +1,7 @@
+
+@media screen and (max-width: 640px) {
+	.pslogin-block .pslogin-buttons ul li {
+		 margin: auto; 
+		 width: 30px; 
+	}
+}

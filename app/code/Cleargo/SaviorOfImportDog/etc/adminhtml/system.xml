@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="import" sortOrder="999" translate="label">
+			<label>Import</label>
+		</tab>
+		<section id="import" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Import</label>
+			<tab>import</tab>
+			<resource>Cleargo_SaviorOfImportDog::config_cleargo_saviorofimportdog</resource>
+			<group id="import" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Import</label>
+				<field id="fix" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="select">
+					<label>Enable Fix?</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="assign_category" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="select">
+					<label>Auto Assign Category?</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
